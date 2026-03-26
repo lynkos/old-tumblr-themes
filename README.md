@@ -3,6 +3,35 @@ Collection of all the Tumblr themes I developed while in middle and high school.
 
 I've been able to recover these lost themes thanks to [web archive](https://web.archive.org/web/20130126064224/http://kir4n-themes.tumblr.com/).
 
+## [Kirans Sxc Theme](kirans-sxc-theme.html)
+### Description
+- Cute sidebar
+- Changing sidebar image (when you hover over it)
+- Pretty fonts
+- Improved Masonry
+- Cute butterfly
+- Gradient columns
+- Topbar and bottombar
+- Tab links
+- Rounded & shadowed border or not
+- Three (3) different cursors to choose
+- Cute animation effects
+- and more!
+
+### Preview
+
+## Alanas Sxc Theme
+### Description
+- [Alana](https://web.archive.org/web/20130126064224/http://hotchocolat3.tumblr.com/)'s _former_ theme
+- Cute sidebar
+- Changing sidebar image (when you hover over it)
+- Three-column (finally!)
+- Pretty fonts
+- Cool permalink
+- and more!
+
+### Preview
+
 ## Theme CRo
 ### Description
 - Faded sidebar pic
