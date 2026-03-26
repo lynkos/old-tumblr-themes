@@ -1,0 +1,911 @@
+
+<!--
+Theme K by kir4n
+Please keep the credit somewhere
+on your page, else I'll have to
+report you. Thanks!
+
+kir4n.tumblr.com
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+
+<title>{title}</title>
+
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+WebFontConfig = {
+google: { families: [ 'Happy+Monkey::latin', 'Cedarville+Cursive::latin', 'Ribeye::latin' ] }
+};
+(function() {
+var wf = document.createElement('script');
+wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+wf.type = 'text/javascript';
+wf.async = 'true';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(wf, s);
+})(); </script>
+
+<!—jQuery loaded remotely -->
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2'></script>
+
+<!--[if !IE]><!-->
+<link rel="stylesheet" type="text/css" href="css/sbtooltip.css" media="screen" />
+
+<script type='text/javascript' src='js/jquery.sbtooltip.js'></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+$("a.sbtooltip").sbTooltip();
+
+});
+</script>
+<!--<![endif]-->
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+$("element").sbTooltip();
+
+});
+</script>
+
+
+<meta name="color:Text" content="#000000" />
+<meta name="color:Title" content="#000000" />
+<meta name="color:Links" content="#999999" />
+<meta name="color:Links hover" content="#DDDDDD" />
+<meta name="color:Sidebar" content="#FFF" />
+<meta name="color:Background" content="#FFFFFF" />
+<meta name="color:House background" content="#FF6B6B" />
+<meta name="color:Paperclip background" content="#FF9C6B" />
+<meta name="color:Heart background" content="#FFFD6B" />
+<meta name="color:Dog paw background" content="#89FF6B" />
+<meta name="color:Star background" content="#6B8EFF" />
+<meta name="color:Question background" content="DDDDDD" />
+<meta name="image:Sidebar" content="" />
+<meta name="image:Background" content="" />
+<meta name="text:House title" content="Home" />
+<meta name="text:House link" content="/" />
+<meta name="text:Paperclip title" content="Linkz" />
+<meta name="text:Paperclip link" content="/" />
+<meta name="text:Heart title" content="ILY" />
+<meta name="text:Heart link" content="/" />
+<meta name="text:Dog paw title" content="Pie" />
+<meta name="text:Dog paw link" content="/" />
+<meta name="text:Sidebar picture link" content="/" />
+<meta name="text:Quote one" content="Some quote here" />
+<meta name="text:Quote two" content="And also here" />
+<meta name="text:Ask title" content="Ask me something" />
+<meta name="if:Mini cursor" content="1" />
+<meta name="if:Sidebar pic fades" content="1" />
+<meta name="if:Show quote" content="1" />
+<meta name="if:Show askbar" content="1" />
+
+<script type="text/javascript" src="http://codysherman.com/tools/infinite-scrolling/code"></script>
+
+<script type="text/javascript" src="http://static.tumblr.com/8pcxx7s/fIHm55rjn/jquery.sbtooltip.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Happy+Monkey|Cedarville+Cursive|Ribeye' rel='stylesheet' type='text/css'>
+
+{block:ifminicursor}<style type="text/css">body, a, a:hover {cursor: url(http://i.imgur.com/ZOrzC.png), progress;}</style>
+{/block:ifminicursor}
+
+<style type="text/css">
+
+iframe#tumblr_controls {
+position:fixed !important;
+opacity: 0.6;
+-webkit-transition: opacity 1s linear;
+-webkit-transition: all 1s linear;
+-moz-transition: all 1s linear;
+-o-transition: all 1s linear;
+transition: all 1s linear;
+}
+
+iframe#tumblr_controls:hover {
+position:fixed !important;
+opacity: 0.9;
+-webkit-transition: opacity 1s linear;
+-webkit-transition: all 1s linear;
+-moz-transition: all 1s linear;
+-o-transition: all 1s linear;
+transition: all 1s linear;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Happy+Monkey|Cedarville+Cursive|Ribeye);
+
+@font-face {
+font-family: "from where you are";
+src: url('http://static.tumblr.com/8pcxx7s/uYzm1m8ej/fromwhereyouare.ttf');
+}
+
+/*** ask ***/
+.bubble {
+align:right;
+background: {color:Question background};
+margin:7px 0px 5px 66px;padding:10px;
+position: relative;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+-o-border-radius:0px;
+border-radius:5px;
+}
+
+.bubble p {
+margin:1px 0px;
+}
+
+.bubble span {
+display:block;
+position:absolute;
+width:1px;
+height:1px;
+font-size: 0;
+line-height: 1px;
+left:-10px;
+top:10px;
+border-top:7px solid transparent;
+border-bottom:7px solid transparent;
+border-right:10px solid {color:Question background};
+}
+
+.askborder {
+float: left;
+margin: 1px 4px 0 0;
+padding: 2px;
+background: #000
+}
+
+
+a.sbtooltip:hover {
+position: relative; /* Allows the tooltip to be absolutely positioned */
+z-index: 100;
+}
+
+/* Speech Bubble */
+a.sbtooltip:before {
+background: rgb(178,178,178); /* For browsers that don't support gradients */
+background: -moz-linear-gradient( /* Firefox gradient */
+90deg,
+rgb(204,204,204) 44%,
+rgb(178,178,178) 72%
+);
+background: -webkit-gradient( /* Webkit gradient */
+linear,
+left bottom,
+left top,
+color-stop(0.44, rgb(204,204,204)),
+color-stop(0.72, rgb(178,178,178))
+);
+color: #000;
+content: attr(data-sbtooltip); /* This takes the content of the attribute named "data-sbtooltip" and displays it within this element – We will use jQuery to take care of this to make sure that the document is still valid xHTML*/
+display: none; /* Hidden until hovered upon */
+
+/* Font, padding, top and right must change depending on the font size you are using on your web page */
+font: 12px 'Happy Monkey';
+padding: 3px 10px;
+position: absolute;
+top: -34px;
+right: 0;
+
+/* Border radii for different browsers */
+-moz-border-radius: 8px;
+-webkit-border-radius: 8px;
+-o-border-radius: 8px;
+border-radius: 8px;
+
+/* Box shadows for different browsers */
+-moz-box-shadow: 0px 0px 4px #999;
+-webkit-box-shadow: 0px 0px 4px #999;
+box-shadow: 0px 0px 4px #999;
+}
+
+/* Triangle */
+a.sbtooltip:after {
+border-width: 12px;
+border-style: solid;
+border-color: rgb(204,204,204) transparent transparent transparent;
+content: ""; /* Forces this pseudo-element to appear on hover */
+display: none;
+height: -2px; /* Width and height could be left out, but I prefer a less 'pointy' triangle */
+width: -4px;
+position: absolute;
+bottom: 7px;
+right: 10px;
+}
+
+/* Display on hover */
+a.sbtooltip:hover:after, a.sbtooltip:hover:before {
+display: block; /* The Speech-bubble tooltip and pointer will appear on hover */
+}
+
+body {
+margin:0px;
+background-color: {color:Background};
+background-image:url({image:Background});
+background-attachment: fixed;
+background-repeat: repeat;
+font-family: 'Happy Monkey';
+font-size: 11px;
+font-color: {color:Text};
+line-height: 13px;
+}
+
+p {
+margin:0px;
+margin-top:1px;
+}
+
+a:link, a:active, a:visited{
+color: {color:Links};
+text-decoration: none;
+}
+
+a:hover {
+color: {color:Links hover};
+text-decoration: none;
+font-style: none;
+text-shadow:1px 1px 5px #999;
+}
+
+div#cage{
+margin: auto;
+position:relative;
+width: 900px;
+overflow:hidden;
+color: {color:Title};
+margin-left:9%;
+}
+
+div#content{
+float: center;
+width: 440px;
+padding: 0px;
+background: transparent;
+margin-left: 190px;
+}
+
+div#entry{
+float: center;
+z-index: 3;
+margin-top: 5px;
+margin-bottom: 5px;
+margin-left: 90px;
+background-color: #FFF;
+border: 1px dotted #AAA;
+padding: 2px;
+{block:IndexPage}
+width: 350px;
+height: auto;
+{/block:IndexPage}
+}
+
+div#sidebarpic{
+position: fixed !important;
+margin-top: 165px;
+margin-left: 44px;
+width: 178px;
+height: 135px;
+border-radius: 0px 0px 0px 15px;
+border: 1px solid #000;
+{block:ifsidebarpicfades}
+opacity: 0.5;
+-webkit-transition: opacity 1s linear;
+-webkit-transition: all 1s linear;
+-moz-transition: all 1s linear;
+transition: all 1s linear;
+{/block:ifsidebarpicfades}
+}
+
+div#sidebarpic:hover{
+width: 178px;
+height: 135px;
+border-radius: 0px 0px 0px 15px;
+{block:ifsidebarpicfades}
+opacity: 0.9;
+-webkit-transition: opacity 1s linear;
+-webkit-transition: all 1s linear;
+-moz-transition: all 1s linear;
+transition: all 1s linear;
+{/block:ifsidebarpicfades}
+}
+
+div#descrip{
+position: fixed !important;
+font-size: 11px;
+font-family: 'Happy Monkey';
+line-height: 12px;
+z-index: 1;
+text-align: right;
+margin-left:46px;
+margin-top: 301px;
+text-shadow: 2px 2px 2px #ffff;
+}
+
+{block:ifshowquote}
+.quote{
+position: fixed !important;
+width:300px;
+height:auto;
+font-family: "Cedarville Cursive";
+font-size: 30px;
+line-height: 30px;
+text-shadow: 2px 2px 2px #888;
+background-color: transparent;
+padding: 2px;
+text-align:center;
+margin-top: 460px;
+margin-left: 640px;
+}
+
+.quotecred{
+position: fixed !important;
+letter-spacing: 4px;
+width:auto;
+height:auto;
+font-family: "Happy Monkey";
+font-size: 17px;
+line-height: 17px;
+text-shadow: 2px 2px 2px #888;
+background-color: transparent;
+padding: 2px;
+text-align:center;
+margin-top: 500px;
+margin-left: 670px;
+}
+{/block:ifshowquote}
+
+{block:ifshowaskbar}
+div#askbar{
+position: fixed !important;
+background: white;
+margin-left: -70px;
+margin-top: 570px;
+font-family: 'ribeye';
+width: auto;
+height: auto;
+border: 1px dashed #999;
+-webkit-transition: opacity 1s linear;
+-webkit-transition: all 1s linear;
+-moz-transition: all 1s linear;
+transition: all 1s linear;
+}
+
+div#askbar:hover{
+margin-left: -70px;
+margin-top: 390px;
+font-family: 'ribeye';
+-webkit-transition: opacity 1s linear;
+-webkit-transition: all 1s linear;
+-moz-transition: all 1s linear;
+transition: all 1s linear;
+}
+{/block:ifshowaskbar}
+
+div#linkz{
+position: fixed !important;
+margin-left: 0px;
+margin-top: 90px;
+}
+
+#link1 a{
+color: black;
+position: fixed;
+background: {color:House background};
+display: inline-block;
+font-size: 8px;
+text-align: center;
+line-height: 15px;
+height: 13px;
+width: 40px;
+transition: all 0.5s ease-out;
+-o-transition-transition: all 0.5s ease-out;
+-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease-out;
+border-radius: 10px 0px 0px 10px;
+margin-top: 60px;
+margin-left: 41px;
+opacity: .6;
+padding-top: 2px;
+z-index: 5;
+}
+
+#link1:hover a{
+width: 188px;
+opacity: 0.9;
+transition: all 0.5s ease-out;
+-o-transition-transition: all 0.5s ease-out;
+-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease-out;
+border-radius: 10px 10px 10px 10px;
+
+}
+
+#link2 a{
+color: black;
+position: fixed;
+background: {color:Paperclip background};
+display: inline-block;
+font-size: 8px;
+text-align: center;
+line-height: 25px;
+height: 13px;
+width: 37px;
+transition: all 0.5s ease-out;
+-o-transition-transition: all 0.5s ease-out;
+-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease-out;
+margin: 0px 0px 0px 40px;
+margin-top: 60px;
+margin-left: 81px;
+opacity: .6;
+padding-top: 2px;
+z-index: 4;
+}
+
+#link2:hover a{
+width: 149px;
+opacity: 0.9;
+border-radius: 0px 10px 10px 0px;
+transition: all 0.5s ease-out;
+-o-transition-transition: all 0.5s ease-out;
+-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease-out;
+}
+
+#link3 a{
+color: black;
+position: fixed;
+background: {color:Heart background};
+display: inline-block;
+font-size: 8px;
+text-align: center;
+line-height: 25px;
+height: 11px;
+width: 38px;
+transition: all 0.5s ease-out;
+-o-transition-transition: all 0.5s ease-out;
+-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease-out;
+margin: 0px 0px 0px 80px;
+margin-top: 60px;
+margin-left: 118px;
+opacity: .6;
+padding-top: 4px;
+z-index: 3;
+}
+
+#link3:hover a{
+width: 111px;
+opacity: 0.9;
+border-radius: 0px 10px 10px 0px;
+transition: all 0.5s ease-out;
+-o-transition-transition: all 0.5s ease-out;
+-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease-out;
+}
+
+#link4 a{
+color: black;
+position: fixed;
+background: {color:Dog paw background};
+display: inline-block;
+font-size: 8px;
+text-align: center;
+line-height: 15px;
+height: 13px;
+width: 39px;
+transition: all 0.5s ease-out;
+-o-transition-transition: all 0.5s ease-out;
+-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease-out;
+margin: 0px 0px 0px 120px;
+margin-top: 60px;
+margin-left: 156px;
+opacity: .6;
+padding-top: 2px;
+z-index: 2;
+}
+
+#link4:hover a{
+width: 73px;
+opacity: 0.9;
+border-radius: 0px 10px 10px 0px;
+transition: all 0.5s ease-out;
+-o-transition-transition: all 0.5s ease-out;
+-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease-out;
+}
+
+#link5 a{
+color: black;
+position: fixed;
+background: {color:Star background};
+display: inline-block;
+font-size: 8px;
+text-align: center;
+line-height: 15px;
+height: 14px;
+width: 34px;
+transition: all 0.5s ease-out;
+-o-transition-transition: all 0.5s ease-out;
+-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease-out;
+margin: 0px 0px 0px 120px;
+border-radius: 0px 10px 10px 0px;
+margin-top: 60px;
+margin-left: 195px;
+opacity: .6;
+padding-top: 1px;
+z-index: 1;
+}
+
+#link5:hover a{
+width: 34px;
+opacity: 0.9;
+transition: all 0.5s ease-out;
+-o-transition-transition: all 0.5s ease-out;
+-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease-out;
+}
+
+.title{
+font-family: 'ribeye';
+text-shadow: 2px 2px 2px #333;
+font-size: 26px;
+line-height: 55px;
+letter-spacing: 2px;
+color: {color:Title};
+letter-spacing: 1;
+font-weight: normal;
+}
+
+#permalink {
+position: absolute;
+margin-top: 7px;
+margin-left: 295px;
+opacity: 0;
+z-index: 99999999;
+-webkit-transition: all 0.6s ease-in-out;
+-moz-transition: all 0.6s ease-in-out;
+-o-transition: all 0.6s ease-in-out;
+transition: all 0.6s ease-in-out;
+}
+
+#entry:hover #permalink {
+opacity: 1;
+z-index: 99999999;
+-webkit-transition: all 0.6s ease-in-out;
+-moz-transition: all 0.6s ease-in-out;
+-o-transition: all 0.6s ease-in-out;
+transition: all 0.6s ease-in-out;
+
+}
+
+.countreblog {
+color: #FFFFFF;
+letter-spacing:1px;
+font-family: 'Happy Monkey';
+font-size:11px;
+line-height:15px;
+margin: 2px;
+margin-top: 1px;
+background-image:url(http://static.tumblr.com/8jq17g7/CH8lofvyp/dark-transparent.png);
+background-repeat:repeat;
+border:1px solid rgba(0,0,0,0.1);
+padding:3px 5px;
+padding-top: 2px;
+padding-bottom: 2px;
+height: 20px;
+z-index: 99999999;
+-webkit-border-radius:2px;
+moz-border-radius:2px;
+-o-border-radius:2px;
+border-radius:2px;
+}
+
+.countreblog a {
+color: #FFF;
+z-index: 99999999;
+}
+
+.perma{
+opacity: 0;
+filter: alpha(opacity = 0);
+width: 60px;
+height: 30px;
+line-height: 30px;
+font-size: 9px;
+position:absolute;
+text-align: center;
+z-index: 99999999;
+margin-top: 4px;
+margin-left: 230px;
+text-align: center;
+-webkit-transition: all 0.6s ease-in-out;
+-moz-transition: all 0.6s ease-in-out;
+-o-transition: all 0.6s ease-in-out;
+transition: all 0.6s ease-in-out;
+}
+
+#entry:hover .perma {
+z-index: 99999999;
+margin-top: 4px;
+margin-left: 230px;
+-webkit-transition: all 0.6s ease-in-out;
+-moz-transition: all 0.6s ease-in-out;
+-o-transition: all 0.6s ease-in-out;
+transition: all 0.6s ease-in-out;
+opacity: 1;
+
+}
+
+.likep {
+display: inline;
+width: 21px;
+float: right;
+height: 20px;
+margin-left:-4px;
+overflow: hidden;
+position: relative;
+z-index: 99999999;
+-webkit-transition: all .4s ease;
+}
+
+.likep a {
+background-image:
+url("http://static.tumblr.com/uiqhh9x/BPnlzww8v/like.png");
+background-position: 0px 0px;
+display: block;
+z-index: 99999999;
+-webkit-transition: opacity 0.4s linear;
+opacity: 2;
+-webkit-transition: all 0.1s linear;
+-moz-transition: all 0.1s linear;
+transition: all .1s linear;
+}
+
+.likep img {
+width: 21px;
+height: 20px;
+-webkit-transition: opacity 0.4s linear;
+opacity: 2;
+z-index: 99999999;
+-webkit-transition: all 0.1s linear;
+-moz-transition: all 0.1s linear;
+transition: all .1s linear;
+
+}
+.rep img{
+width: 24px;
+height: 20px;
+line-height: 30px;
+display: inline;
+z-index: 99999999;
+}
+
+#postnotes{
+text-align: justify;
+}
+
+#postnotes blockquote{
+border: 0px;
+}
+
+blockquote{
+padding:0px 0px 2px 5px;
+margin:0px 0px 2px 1px;
+border-left: 1px dotted {color:Text};
+}
+
+blockquote p, ul{
+margin:0px;
+padding:0px;
+}
+
+a img{
+border: 0px;
+}
+ul, ol, li{
+list-style:none;
+margin:0px;
+padding:0px;
+}
+.user_1 .label, .user_2 .label, .user_3 .label, .user_4 .label, .user_5 .label, .user_6 .label,
+.user_7 .label, .user_8 .label, .user_9 .label {
+color:{color:Title};
+}
+.notes img{
+width:10px;
+position:relative;
+top:3px;
+}
+
+
+a img{
+border: 0px;
+}
+
+ul, ol, li{
+list-style:none; margin:0px; padding:0px;
+}
+
+.user_1 .label, .user_2 .label, .user_3 .label, .user_4 .label, .user_5 .label, .user_6 .label,
+.user_7 .label, .user_8 .label, .user_9 .label {
+color:#555555;
+}
+
+.notes img{
+width:10px;
+position:relative;
+top:3px;
+}
+
+.permalink {
+display: block;
+border-top: 1px solid #ddd;
+padding: 2px;
+margin: 4px 8px 0px 8px;
+text-transform: uppercase;
+font-family: 'Happy Monkey';
+font-size: 8px;
+color: #424242;
+line-height: 8px;
+text-align: center;
+text-decoration: none;
+z-index: 99999999;
+-webkit-transition: color 0.5s ease-out;
+-moz-transition: color 0.5s ease-out;
+}
+
+small{
+font-size: 90%;
+}
+
+{CustomCSS}
+</style>
+
+<link rel="shortcut icon"href="http://i750.photobucket.com/albums/xx142/pixelypeach/08-16-10%20mini%20pixels/ribbon3.gif">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}" />
+<meta name="viewport" content="width=820" />
+<body>
+
+<div id="cage">
+<div id="center">
+<div id="sidebar">
+<center>
+<div id="sidebarpic">
+<a href="{text:sidebar picture link}"><img src="{image:sidebar}" width=178px height=135px style="border-radius: 0px 0px 0px 15px;"></a><br></div></center></div>
+
+<div id="linkz">
+<div id="link1">
+<a title="{text:House title}" class="sbtooltip" href="{text:House link}"><img src="http://static.tumblr.com/8pcxx7s/wzMm53yu5/53-house.png" width=10px height=11px></a></div>
+<div id="link2">
+<a title="{text:Paperclip title}" href="{text:Paperclip link}" class="sbtooltip"><img src="http://static.tumblr.com/8pcxx7s/rWPm53yug/68-paperclip.png" width=6px height=10px></a></div>
+<div id="link3">
+<a title="{text:Heart title}" href="{text:Heart link}" class="sbtooltip"><img src="http://static.tumblr.com/yvvztqy/dR3m57xw1/29-heart.png" width=9px height=8px></a></div>
+<div id="link4">
+<a title="{text:Dog paw title}" href="{text:Dog paw link}" class="sbtooltip"><img src="http://static.tumblr.com/8pcxx7s/0Nam53z75/82-dog-paw.png" width=9px height=10px></a></div>
+<div id="link5">
+<a title="Credit" class="sbtooltip" href="http://kir4n.tumblr.com"><img src="http://static.tumblr.com/8pcxx7s/JLWm53ytt/28-star.png" width=10px height=11px></a>
+</div></div>
+
+<div id="descrip"><div style="overflow:auto; color:{color:Text}; width: 177px; height: 44px; border: 1px dashed #CCC; background-color:{color:Sidebar}; font-family: happy monkey; font-size: 12px; text-align: center;"><br><center>{Description}</a></div></div></center>
+
+{block:ifshowaskbar}
+<div id="askbar">
+<br><center>
+<big><big><big><big>{text:Ask title}</big></big></big></big>
+</center><br><br><br>
+<p><iframe frameborder="0" height="149" id="ask_form" scrolling="no" src="http://www.tumblr.com/ask_form/{name}.tumblr.com" width="100%"></iframe><!--[if IE]><mce:script type="text/javascript"><! document.getElementById('ask_form').allowTransparency=true; // --><!--[endif] --></p><br><br>
+</div>
+{/block:ifshowaskbar}
+
+{block:ifshowquote}
+<div class="quote">{text:Quote one}
+</div>
+
+<div class="quotecred">{text:Quote two}</div>
+{/block:ifshowquote}
+
+<div id="content">
+{block:Posts}
+<div id="entry">
+
+{block:IndexPage}
+<div class="perma">
+<div class="likep"><a id="like{PostID}" href="javascript:likelink('{PostID}','{Permalink}','');"><img src="http://static.tumblr.com/lba83dv/OUUltd958/spacer.gif" width="21" height="20" alt="Like this post" id="likeimage{PostID}"/></a></div>
+<div class="rep"><a href="{reblogurl}" target="_blank"><img src="http://static.tumblr.com/uiqhh9x/OAClzwwao/reblog.png" width="30"/></a></div>
+</div><div id="permalink">
+<span class="countreblog"><a href="{Permalink}">{NoteCount}</a></span></div>
+{/block:IndexPage}
+
+{block:Text}
+{block:Title}<span class="title">{Title}</span><br>
+{/block:Title}
+<span class="entrytext">{Body}</span>
+{/block:Text}
+
+{block:Link}
+<a href="{URL}" class="title">{Name}</a><br>
+{block:Description}{Description}
+{/block:Description}
+{/block:Link}
+
+{block:Photo}
+{block:IndexPage}
+{LinkOpenTag}
+<div class="photo"><a href="{Permalink}">
+<img src="{PhotoURL-500}" alt="{PhotoAlt}" width= 350px height=250px /></a></div>{LinkCloseTag}
+{/block:IndexPage}
+{block:PermalinkPage}{LinkOpenTag}
+<center><img src="{PhotoURL-500}" alt="{PhotoAlt}" width=340px /></center>
+{LinkCloseTag}
+{/block:PermalinkPage}
+{/block:Photo}
+
+{block:Photoset}
+<img src="{Photoset-250}" </a>
+{/block:Photoset}
+
+{block:Quote}
+❝{Quote}❞<br><br>
+{block:Source}
+~~ {Source}
+{/block:Source}
+{/block:Quote}
+
+{block:Chat}
+{block:Lines}
+{block:Label}
+{Label}
+{/block:Label}
+{Line}<br>
+{/block:Lines}
+{/block:Chat}
+
+{block:Answer}
+<img src="{AskerPortraitURL-48}" align="left" class="askborder">
+<div class="bubble"><span></span>{Asker}: {Question}&nbsp;</div>{Answer}{/block:Answer}
+
+{block:Audio}
+<div style="width:220px; height:20px;">
+<div style="float:left">{AudioPlayerWhite}</div>
+<div style="margin-top:10px; float:right;">
+{block:ExternalAudio}{/block:ExternalAudio}
+</div></div><br>
+{/block:Audio}
+
+{block:Video}<center>
+{Video-400}
+</center>
+{/block:Video}
+
+{block:PermalinkPage}{block:Caption}{Caption}{/block:Caption}<br><br>
+<center>{block:NoteCount}{NoteCount} Notes{/block:NoteCount} --
+{block:Date} Posted on {DayOfMonthWithZero} {Month} {Year} {/block:Date}</center>
+<br>
+{block:HasTags} ✓ {block:Tags}<a href="{TagURL}"> #{Tag}</a>
+{/block:Tags}{/block:hasTags}{/block:PermalinkPage}
+
+{block:PostNotes}{PostNotes}
+{/block:PostNotes}
+</div>
+
+{/block:Posts}
+
+</div></div></div>
+
+<script type="text/javascript" src="http://static.tumblr.com/uiqhh9x/aK8m1cpdr/like2.js"></script>
+<iframe id="likeiframe" style="width: 1px; height: 1px;"></iframe>
+</html>
